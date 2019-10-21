@@ -28,7 +28,7 @@ services:
       - "443:3001"
     command: ["sh", "-c", "node /usr/src/app/bin/wait-for-it.js db 5432  && npm run-script start"]
   db:
-    image: postgres
+    image: postgres:11
     environment:
       POSTGRES_USER : "servicebot_u"
       POSTGRES_PASSWORD : "secret_doggo"
